@@ -7,3 +7,5 @@ rust/Cargo.lock
 
 # Backup files created by rustfmt
 **/*.rs.bk
+
+.vscode
