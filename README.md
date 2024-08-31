@@ -4,11 +4,11 @@ optimizations but to understand what an amateur implementer might expect.
 
 ## Summary
 Two different implementations of a simple server (one in Rust and one in Java) were created. Each server takes in a request
-that is approximately 2K and returns a simple request. The code looks for one value in the JSON request and returns a different
+that is approximately 2K and returns a simple response. The code looks for one value in the JSON request and returns a different
 response depending on whether that was present (coppa). This use-case was chosen since it is most like a real-time adtech scenario, and 
-since the values are actually used, there is little chance for internal optimizations. 
+since the values are actually consumed, there is little chance for internal optimizations. 
 
-Each system logs approximately the same amount of information as the log. 
+Each system logs approximately the same amount of information. 
 
 ## Running the Java Server
 
