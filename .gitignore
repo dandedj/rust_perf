@@ -1,0 +1,9 @@
+/rust/target/
+java/target/
+
+# The library shouldn't decide about the exact versions of 
+# its dependencies, but let the downstream crate decide.
+rust/Cargo.lock
+
+# Backup files created by rustfmt
+**/*.rs.bk

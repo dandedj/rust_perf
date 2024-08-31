@@ -1,0 +1,88 @@
+concurrency: 12
+base: 'http://localhost:8081'
+iterations: 100000
+
+plan:
+  - name: Load test Java parse_json
+    request:
+      url: /parse_json
+      method: POST
+      headers:
+        Content-Type: application/json
+      body: >
+        {
+          "id": "bid-request-1",
+          "imp": [
+            {
+              "id": "imp-1",
+              "banner": {
+                "w": 300,
+                "h": 250,
+                "pos": 1,
+                "battr": [13, 14]
+              },
+              "bidfloor": 0.03,
+              "bidfloorcur": "USD"
+            }
+          ],
+          "app": {
+            "id": "app-123456",
+            "name": "Example App",
+            "bundle": "com.example.app",
+            "storeurl": "https://play.google.com/store/apps/details?id=com.example.app",
+            "cat": ["IAB1", "IAB2", "IAB3"],
+            "ver": "2.2",
+            "publisher": {
+              "id": "pub-9876543",
+              "name": "Example Publisher",
+              "domain": "example.com"
+            }
+          },
+          "device": {
+            "ua": "Mozilla/5.0 (Linux; Android 10; SM-A505F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+            "geo": {
+              "lat": 40.7128,
+              "lon": -74.0060,
+              "country": "USA",
+              "region": "NY",
+              "metro": "501",
+              "city": "New York",
+              "zip": "10001",
+              "type": 2
+            },
+            "dnt": 0,
+            "lmt": 0,
+            "ip": "192.168.1.1",
+            "devicetype": 1,
+            "make": "Samsung",
+            "model": "Galaxy A50",
+            "os": "Android",
+            "osv": "10",
+            "h": 1920,
+            "w": 1080,
+            "language": "en",
+            "carrier": "Verizon",
+            "connectiontype": 2,
+            "ifa": "aaa-bbb-ccc-ddd"
+          },
+          "user": {
+            "id": "user123456",
+            "buyeruid": "buyer-user-id",
+            "yob": 1985,
+            "gender": "M"
+          },
+          "at": 2,
+          "tmax": 120,
+          "wseat": ["seat1", "seat2"],
+          "allimps": 0,
+          "cur": ["USD"],
+          "bcat": ["IAB25", "IAB7-39", "IAB8-18"],
+          "badv": ["badadvexample.com"],
+          "regs": {
+            "coppa": 1,
+            "gdpr": 1
+          },
+          "ext": {
+            "custom_field": "custom_value"
+          }
+        }
